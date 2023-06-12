@@ -32,7 +32,6 @@ public class SeleniumGridTest {
         driverChrome.quit();
         driverFireFox.quit();
         driverEdge.quit();
-        Thread.sleep(10000);
     }
 
 }
