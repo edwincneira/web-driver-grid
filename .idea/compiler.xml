@@ -9,6 +9,9 @@
         <module name="web-driver-grid" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="tuhabi-automation-iu-mx" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="TypeScriptCompiler">
     <option name="recompileOnChanges" value="true" />
