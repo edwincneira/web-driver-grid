@@ -9,7 +9,9 @@ import org.junit.runner.RunWith;
         tags = "@tests",
         monochrome = true,
         features = {
-                "src/test/resources/features/navegators.feature"
+                "src/test/resources/features/chromeNavegators.feature",
+                "src/test/resources/features/edgeNavegators.feature",
+                "src/test/resources/features/fireFixNvegators.feature"
         },
         glue = "com.example")
 public class Runner {
