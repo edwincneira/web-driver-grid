@@ -53,7 +53,7 @@ pipeline {
                 keepAll: true,
                 reportDir: 'target/site/serenity',
                 reportFiles: 'index.html',
-                reportName: 'SerenityReportFireFox'
+                reportName: 'SerenityReport'
             ])
         }
     }
