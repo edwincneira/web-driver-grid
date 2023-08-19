@@ -32,7 +32,7 @@ pipeline {
                     sh 'mvn clean verify -Denvironment=chrome -Dcucumber.filter.tags=@chrome'
                   } else if (navigator.contains('edge')) {
                     sh 'docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-edge:latest'
-                    sh 'mvn verify -Denvironment=edge -Dcucumber.filter.tags=@edge'
+                    sh 'mvn clean verify -Denvironment=edge -Dcucumber.filter.tags=@edge'
                   } else if (navigator.contains('firefox')) {
                     sh 'docker run -d --net grid -e SE_EVENT_BUS_HOST=selenium-hub --shm-size="2g" -e SE_EVENT_BUS_PUBLISH_PORT=4442 -e SE_EVENT_BUS_SUBSCRIBE_PORT=4443 selenium/node-firefox:latest'
                     sh 'mvn clean verify -Denvironment=firefox -Dcucumber.filter.tags=@fireFox'
