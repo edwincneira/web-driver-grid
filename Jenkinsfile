@@ -43,10 +43,6 @@ pipeline {
     }
     post {
         always {
-            sh 'echo Delete selenium grid server'
-            sh 'docker stop $(docker ps -aq)'
-            sh 'docker rm $(docker ps -aq)'
-            sh 'docker network rm grid'
             publishHTML(target: [
                 allowMissing: false,
                 alwaysLinkToLastBuild: false,
@@ -55,6 +51,10 @@ pipeline {
                 reportFiles: 'index.html',
                 reportName: 'SerenityReport'
             ])
+            sh 'echo Delete selenium grid server'
+            sh 'docker stop $(docker ps -aq)'
+            sh 'docker rm $(docker ps -aq)'
+            sh 'docker network rm grid'  
         }
     }
 }
